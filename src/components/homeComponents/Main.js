@@ -23,12 +23,12 @@ function Main() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
     };
     const fetchImages = async () => {
       const response = await fetch(
-        `http://localhost:5000/requestHomeImages`,
+        `https://portfoliodanieleserver.onrender.com/requestHomeImages`,
         requestOptions
       );
       const data = await response.json();

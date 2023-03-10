@@ -26,12 +26,12 @@ function EditModal({ state, hide, type, clickedProject }) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
     };
     const fetchProjects = async () => {
       const response = await fetch(
-        `http://localhost:5000/requestType?type=${category}`,
+        `https://portfoliodanieleserver.onrender.com/requestType?type=${category}`,
         requestOptions
       );
       const data = response.status == 200 && (await response.json());
@@ -88,7 +88,7 @@ function EditModal({ state, hide, type, clickedProject }) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
       body: JSON.stringify({
         project: {
@@ -98,7 +98,7 @@ function EditModal({ state, hide, type, clickedProject }) {
         },
       }),
     };
-    fetch(`http://localhost:5000/editProject?type=${type}`, requestOptions)
+    fetch(`https://portfoliodanieleserver.onrender.com/editProject?type=${type}`, requestOptions)
       .then((response) => {
         if (response.status === 200) {
           hide();

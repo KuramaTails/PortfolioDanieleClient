@@ -20,11 +20,11 @@ function AddModal({ state, hide, type }) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
       body: JSON.stringify({ projectName: projectName }),
     };
-    fetch(`http://localhost:5000/addProject?type=${type}`, requestOptions)
+    fetch(`https://portfoliodanieleserver.onrender.com/addProject?type=${type}`, requestOptions)
       .then((response) => {
         if (response.status === 200) {
           hide();

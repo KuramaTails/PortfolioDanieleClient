@@ -45,11 +45,11 @@ function Main({setIsAuthenticated}) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
       body: JSON.stringify({ username: username, password: password }),
     };
-    fetch("http://localhost:5000/auth", requestOptions)
+    fetch("https://portfoliodanieleserver.onrender.com/auth", requestOptions)
       .then((response) => {
         switch (true) {
           case response.status === 200:

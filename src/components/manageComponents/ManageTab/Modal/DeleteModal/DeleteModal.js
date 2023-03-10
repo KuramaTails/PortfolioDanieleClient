@@ -17,11 +17,11 @@ function DeleteModal({
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
       body: JSON.stringify({ category: category, imageId: clickedImage._id }),
     };
-    fetch(`http://localhost:5000/deleteImage`, requestOptions)
+    fetch(`https://portfoliodanieleserver.onrender.com/deleteImage`, requestOptions)
       .then((response) => {
         if (response.status === 200) {
           let newImagesArr = images.filter(

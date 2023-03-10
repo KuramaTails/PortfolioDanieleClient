@@ -20,12 +20,12 @@ function Main({ bgImage }) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
     };
     const fetchFrontImage = async () => {
       const response = await fetch(
-        `http://localhost:5000/requestBgImage?type=photo`,
+        `https://portfoliodanieleserver.onrender.com/requestBgImage?type=photo`,
         requestOptions
       );
       const data = await response.json();
@@ -44,7 +44,7 @@ function Main({ bgImage }) {
     const fetchProjects = async () => {
       !bgImage && (await fetchFrontImage().catch(console.error));
       const response = await fetch(
-        `http://localhost:5000/requestPhotoImages`,
+        `https://portfoliodanieleserver.onrender.com/requestPhotoImages`,
         requestOptions
       );
       const data = await response.json();

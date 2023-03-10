@@ -18,12 +18,12 @@ function ProjectsTab() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
       body: JSON.stringify({ projectId: id }),
     };
     fetch(
-      `http://localhost:5000/deleteProject?type=${categories[currentTab]}`,
+      `https://portfoliodanieleserver.onrender.com/deleteProject?type=${categories[currentTab]}`,
       requestOptions
     )
       .then((response) => {
@@ -40,11 +40,11 @@ function ProjectsTab() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
     };
     fetch(
-      `http://localhost:5000/requestProjects?type=${categories[currentTab]}`,
+      `https://portfoliodanieleserver.onrender.com/requestProjects?type=${categories[currentTab]}`,
       requestOptions
     )
       .then((response) => response.json())

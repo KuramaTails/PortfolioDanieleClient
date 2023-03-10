@@ -5,7 +5,7 @@ function Head() {
   return (
     <Helmet>
       <meta charset="UTF-8" />
-      <link rel="preconnect" href="http://localhost:5000" />
+      <link rel="preconnect" href="https://portfoliodanieleserver.onrender.com/" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="canonical" href="http://danieleviolo.com/" />
       <link

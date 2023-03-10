@@ -105,7 +105,7 @@ function UploadTab() {
       image: imageData,
     };
     fetch(
-      `http://localhost:5000/${
+      `https://portfoliodanieleserver.onrender.com/${
         category === "Models" ? "uploadModel" : "uploadImage"
       }`,
       {

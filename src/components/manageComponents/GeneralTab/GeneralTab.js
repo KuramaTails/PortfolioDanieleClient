@@ -17,12 +17,12 @@ function GeneralTab() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
     };
     const fetchProjects = async () => {
       const response = await fetch(
-        `http://localhost:5000/findGeneral?cat=${categories[currentTab]}`,
+        `https://portfoliodanieleserver.onrender.com/findGeneral?cat=${categories[currentTab]}`,
         requestOptions
       );
       const data = response.status === 200 && (await response.json());

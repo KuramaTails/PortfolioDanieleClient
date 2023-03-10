@@ -29,11 +29,11 @@ function ModalComponent({
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://localhost:5000/",
+        "Access-Control-Allow-Origin": "https://portfoliodanieleserver.onrender.com/",
       },
       body: JSON.stringify({ currentImage: categoryImage.imageprops._id }),
     };
-    fetch(`http://localhost:5000/editGeneral?cat=${category}`, requestOptions)
+    fetch(`https://portfoliodanieleserver.onrender.com/editGeneral?cat=${category}`, requestOptions)
       .then((response) => {
         if (response.status === 200) {
           setCurrentImages((prevState) => ({
